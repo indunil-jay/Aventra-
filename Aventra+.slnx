@@ -3,4 +3,10 @@
     <File Path=".editorconfig" />
     <File Path="Directory.Build.props" />
   </Folder>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Api/">
+    <Project Path="AventraPlus.Api/AventraPlus.Api.csproj" Id="7b19e556-b8ce-4124-9224-74f62b7f4663" />
+  </Folder>
+  <Folder Name="/src/Module/" />
+  <Folder Name="/src/Module/Events/" />
 </Solution>
