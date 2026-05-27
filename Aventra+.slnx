@@ -5,8 +5,10 @@
   </Folder>
   <Folder Name="/src/" />
   <Folder Name="/src/Api/">
-    <Project Path="AventraPlus.Api/AventraPlus.Api.csproj" Id="7b19e556-b8ce-4124-9224-74f62b7f4663" />
+    <Project Path="src/Api/AventraPlus.Api/AventraPlus.Api.csproj" Id="7b19e556-b8ce-4124-9224-74f62b7f4663" />
   </Folder>
   <Folder Name="/src/Module/" />
-  <Folder Name="/src/Module/Events/" />
+  <Folder Name="/src/Module/Events/">
+    <Project Path="src/Modules/Aventra.Plus.Modules.Events.Api/Aventra.Plus.Modules.Events.Api.csproj" Id="7b56822b-d23d-4e74-8aac-94e034f7cc93" />
+  </Folder>
 </Solution>

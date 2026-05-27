@@ -13,10 +13,11 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["Directory.Build.props", "."]
-COPY ["AventraPlus.Api/AventraPlus.Api.csproj", "AventraPlus.Api/"]
-RUN dotnet restore "./AventraPlus.Api/AventraPlus.Api.csproj"
+COPY ["src/Api/AventraPlus.Api/AventraPlus.Api.csproj", "src/Api/AventraPlus.Api/"]
+COPY ["src/Modules/Aventra.Plus.Modules.Events.Api/Aventra.Plus.Modules.Events.Api.csproj", "src/Modules/Aventra.Plus.Modules.Events.Api/"]
+RUN dotnet restore "./src/Api/AventraPlus.Api/AventraPlus.Api.csproj"
 COPY . .
-WORKDIR "/src/AventraPlus.Api"
+WORKDIR "/src/src/Api/AventraPlus.Api"
 RUN dotnet build "./AventraPlus.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage
